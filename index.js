@@ -18,4 +18,8 @@ app.post('/api/polls', (req, res) => {
   pollsController.updatePoll(req, res);
 });
 
+app.post('/api/create', (req, res) => {
+  pollsController.createPoll(req, res);
+});
+
 app.listen(7777);

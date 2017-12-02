@@ -27,12 +27,14 @@ class App extends Component {
   }
 
   updateCount(id, option) {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
     const info = {
       id,
       option,
     };
+
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
     fetch('http://localhost:7777/api/polls', {
       method: 'POST',
       headers,
