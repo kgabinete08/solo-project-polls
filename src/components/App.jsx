@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Poll from './Poll';
+import styles from '../styles/App.css';
 
 const pollsList = [];
 
@@ -56,8 +57,10 @@ class App extends Component {
     });
 
     return (
-      <div>
-        { results }
+      <div className={ styles.root }>
+        <center>
+          { results }
+        </center>
       </div>
     );
   }

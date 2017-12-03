@@ -5,9 +5,12 @@ import Create from './Create';
 
 const Main = () => (
   <div>
+    <center>
+      <h1>Polls</h1>
+    </center>
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/create">Add Poll</Link></li>
+      <li style={{ listStyle: 'none' }}><Link to="/">Home</Link></li>
+      <li style={{ listStyle: 'none' }}><Link to="/create">Add Poll</Link></li>
     </ul>
 
     <hr />

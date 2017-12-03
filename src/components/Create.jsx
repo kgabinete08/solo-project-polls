@@ -61,19 +61,34 @@ class Create extends Component {
   }
 
   render() {
+    const inputStyle = {
+      width: '30%',
+      padding: '12px 20px',
+      margin: '8px 0',
+      boxSizing: 'border-box',
+      fontSize: '2em',
+    };
+
+    const buttonStyle = {
+      backgroundColor: 'grey',
+      padding: '0.8em',
+      fontSize: '1.5em',
+    };
+
     return (
       <div>
-        <h2>Create Poll</h2>
+        <h1>Create Poll</h1>
         <form onSubmit={this.handleSubmit}>
-          <h4>Title</h4>
+          <h3>Title</h3>
           <input
             type="text"
             placeholder="Enter title here..."
             value={this.state.title}
             onChange={this.handleTitleChange}
+            style={inputStyle}
           />
 
-          <h4>Options</h4>
+          <h3>Options</h3>
 
           {this.state.options.map((item, idx) => (
             <div>
@@ -83,11 +98,12 @@ class Create extends Component {
                 value={item.option}
                 onChange={e => this.handleOptionChange(e, idx)}
                 key={item}
+                style={inputStyle}
               />
             </div>
           ))}
-          <button type="button" onClick={this.handleAddOption}>Add another option +</button>
-          <button>Submit</button>
+          <button type="button" onClick={this.handleAddOption} style={buttonStyle}>Add another option +</button>
+          <button style={buttonStyle}>Submit</button>
         </form>
         {this.state.fireRedirect && <Redirect to="/" />}
       </div>

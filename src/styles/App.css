@@ -1,0 +1,5 @@
+:global(.root) {
+  max-width: 60vw;
+  list-style: none;
+  background-color: ivory;
+}
